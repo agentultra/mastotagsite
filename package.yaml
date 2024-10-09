@@ -21,6 +21,16 @@ description:         Please see the README on GitHub at <https://github.com/gith
 
 dependencies:
 - base >= 4.7 && < 5
+- bytestring
+- conduit
+- conduit-extra
+- blaze-html
+- blaze-markup
+- http-conduit
+- resourcet
+- rss-conduit
+- text
+- xml-conduit
 
 ghc-options:
 - -Wall
@@ -46,6 +56,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - mastotagsite
+    - rss-conduit
 
 tests:
   mastotagsite-test:
@@ -57,3 +68,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - mastotagsite
+    - hspec

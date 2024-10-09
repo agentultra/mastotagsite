@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      MastoTagSite
   other-modules:
       Paths_mastotagsite
   autogen-modules:
@@ -35,6 +35,16 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , blaze-html
+    , blaze-markup
+    , bytestring
+    , conduit
+    , conduit-extra
+    , http-conduit
+    , resourcet
+    , rss-conduit
+    , text
+    , xml-conduit
   default-language: Haskell2010
 
 executable mastotagsite-exe
@@ -48,7 +58,17 @@ executable mastotagsite-exe
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , blaze-html
+    , blaze-markup
+    , bytestring
+    , conduit
+    , conduit-extra
+    , http-conduit
     , mastotagsite
+    , resourcet
+    , rss-conduit
+    , text
+    , xml-conduit
   default-language: Haskell2010
 
 test-suite mastotagsite-test
@@ -63,5 +83,16 @@ test-suite mastotagsite-test
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , blaze-html
+    , blaze-markup
+    , bytestring
+    , conduit
+    , conduit-extra
+    , hspec
+    , http-conduit
     , mastotagsite
+    , resourcet
+    , rss-conduit
+    , text
+    , xml-conduit
   default-language: Haskell2010

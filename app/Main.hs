@@ -1,6 +1,10 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Main (main) where
 
-import Lib
+import MastoTagSite
+import Text.RSS.Types
 
 main :: IO ()
-main = someFunc
+main = do
+  maybeRss <- run "inktober2024"
+  print $ head . channelItems <$> maybeRss
